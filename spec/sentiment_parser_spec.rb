@@ -29,6 +29,11 @@ describe SentimentParser do
     expect(analyze).to eq @analysis
   end
 
+  it 'count all words' do
+    top_three_words = SentimentParser.count_sentiment(@results)
+    expect(results.length).to_not eql 0
+  end
+
 #   Extra credit
 #   Write a test that calls a method "top_words" that returns
 #   a hash that has an array of hashes with the top three positive and negative words
