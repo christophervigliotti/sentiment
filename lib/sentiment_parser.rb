@@ -15,6 +15,23 @@ class SentimentParser
     negative_counter = 0
     results = {:positive => 0, :negative => 0}
     words.downcase.split(' ').each do |word|
+      positive_counter +=1 if positive_words_array.include?(word)
+      negative_counter +=1 if negative_words_array.include?(word)
+    end
+
+    results[:positive] = positive_counter
+    results[:negative] = negative_counter
+    return results
+  end
+
+  # this works
+  def self.analyze_version_01(words)
+    positive_words_array = positive_words
+    negative_words_array = negative_words
+    positive_counter = 0
+    negative_counter = 0
+    results = {:positive => 0, :negative => 0}
+    words.downcase.split(' ').each do |word|
       positive_words_array.each do |positive_word|
         positive_counter += 1 if positive_word.strip == word.strip
       end
