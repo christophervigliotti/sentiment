@@ -2,13 +2,13 @@
 class SentimentParser
 
   def self.positive_words
-    File.readlines('data/positive_words.txt')
-    #File.readlines('data/positive_words_vigliotti.txt')
+    #File.readlines('data/positive_words.txt')
+    File.readlines('data/positive_words_vigliotti.txt')
   end
 
   def self.negative_words
-    File.readlines('data/negative_words.txt')
-    #File.readlines('data/negative_words_vigliotti.txt')
+    #File.readlines('data/negative_words.txt')
+    File.readlines('data/negative_words_vigliotti.txt')
   end
 
   # this returns incorrect count
