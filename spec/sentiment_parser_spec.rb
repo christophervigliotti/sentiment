@@ -4,29 +4,41 @@ require 'sentiment_parser'
 describe SentimentParser do
 
   before do
-    #@results = File.read('spec/fixtures/twitter.txt')
-    #@analysis = {positive: 183, negative: 266}
-    @results = File.read('spec/fixtures/vigliotti.txt')
-    @analysis = {positive: 1, negative: 1}
+    @results = File.read('spec/fixtures/twitter.txt')
+    @analysis = {positive: 183, negative: 266}
+    #@results = File.read('spec/fixtures/vigliotti.txt')
+    #@analysis = {positive: 1, negative: 1}
   end
 
-  xit 'returns results' do
+  it 'returns results' do
     expect(@results.length).to_not eq(0)
   end
 
-  xit 'returns positive words' do
+  it 'returns positive words' do
     results = SentimentParser.positive_words
+    puts results
     expect(results.length).to_not eql 0
   end
 
-  xit 'returns negative words' do
+  it 'returns negative words' do
     results = SentimentParser.negative_words
+    puts results
     expect(results.length).to_not eql 0
   end
 
   it 'analyzes' do
     analyze = SentimentParser.analyze(@results)
     expect(analyze).to eq @analysis
+  end
+
+  it 'gets top 3 positive and negative words' do
+    top_three = SentimentParser.top_three(@results)
+    puts 'hi!'
+    puts top_three
+    expect(top_three).to have_key(:positive)
+    expect(top_three).to have_key(:negative)
+    expect(top_three[:positive].length).to eql 3
+    expect(top_three[:negative].length).to eql 3
   end
 
 #   Extra credit

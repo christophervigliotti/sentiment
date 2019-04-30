@@ -1,0 +1,19 @@
+# Notes
+
+    My Week 3 Homework: https://github.com/christophervigliotti/sentiment
+    Week 4...last day to focus just on Ruby
+    next week...Rails!
+    homework review
+    More Gems
+      Pry
+        an IRB alternative
+        allows you to stop the server at command "binding.pry"
+        https://github.com/pry/pry
+
+      Dotenv
+        loads environment variables from '.env'
+
+
+# Homework
+
+    https://github.com/paul;wenig/new_releases
