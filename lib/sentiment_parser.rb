@@ -12,12 +12,10 @@ class SentimentParser
   end
 
   def self.analyze(words)
-    positive_words_array = positive_words
-    negative_words_array = negative_words
     results = {:positive => 0, :negative => 0}
     words.downcase.split(' ').each do |word|
-      results[:positive] +=1 if positive_words_array.include?(word)
-      results[:negative] +=1 if negative_words_array.include?(word)
+      results[:positive] +=1 if positive_words.include?(word)
+      results[:negative] +=1 if negative_words.include?(word)
     end
     return results
   end
