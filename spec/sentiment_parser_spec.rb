@@ -10,16 +10,16 @@ describe SentimentParser do
     #@analysis = {positive: 1, negative: 1}
   end
 
-  xit 'returns results' do
+  it 'returns results' do
     expect(@results.length).to_not eq(0)
   end
 
-  xit 'returns positive words' do
+  it 'returns positive words' do
     results = SentimentParser.positive_words
     expect(results.length).to_not eql 0
   end
 
-  xit 'returns negative words' do
+  it 'returns negative words' do
     results = SentimentParser.negative_words
     expect(results.length).to_not eql 0
   end
