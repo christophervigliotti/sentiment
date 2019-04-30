@@ -17,7 +17,7 @@ class SentimentParser
         puts "does #{word} equal #{positive_word}"
 
         # this is displaying false even when the words match
-        puts positive_word == word
+        puts positive_word.strip == word.strip
 
       end
     end
