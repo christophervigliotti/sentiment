@@ -6,9 +6,18 @@ The goal is to get the specs to pass.  Using RSpec, type `rspec spec` to run the
 
 # Extra Credit
 
-# Work Notes
+# Work Performed
 
-    pulled down repo
-    gem install rspec
-    bundle install
-    rspec spec (command completed)
+* pulled down repo
+* gem install rspec
+* bundle install
+* rspec spec (command completed)
+* first three tests passed
+* fourth test failing...re-work with smaller sample size for tweets and lists...still failing
+
+# TODO
+
+* get test 4 to work with smaller sample size (ask for help)
+* re-integrate actual lists, get test 4 to work
+* complete extra credit
+* add initialize method, add negative and positive words as object properties
