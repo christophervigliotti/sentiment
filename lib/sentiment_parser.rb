@@ -12,19 +12,11 @@ class SentimentParser
     positive_words_array = positive_words
     negative_words_array = negative_words
     results = {:positive => 0, :negative => 0}
-    puts '- - - positive_words_array - - -'
-    puts positive_words_array
-    puts '- - - negative_words_array - - -'
-    puts negative_words_array
-
-    puts '- - - - -loop- - - - -'
     words.downcase.split(/[\s,',-]/).each do |word|
-      puts ''
-      puts "word is *#{word}*"
-      puts "positve words match?"
-      puts positive_words_array.include?(word)
-      puts "negative words match?"
-      puts negative_words_array.include?(word)
+      positive_words_array.each do |positive_word|
+        puts "does #{word} equal #{positive_word}"
+        puts positive_word == word
+      end
     end
 
     return results
