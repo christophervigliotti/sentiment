@@ -4,10 +4,10 @@ require 'sentiment_parser'
 describe SentimentParser do
 
   before do
-    #@results = File.read('spec/fixtures/twitter.txt')
-    #@analysis = {positive: 183, negative: 266}
-    @results = File.read('spec/fixtures/vigliotti.txt')
-    @analysis = {positive: 1, negative: 1}
+    @results = File.read('spec/fixtures/twitter.txt')
+    @analysis = {positive: 183, negative: 266}
+    #@results = File.read('spec/fixtures/vigliotti.txt')
+    #@analysis = {positive: 1, negative: 1}
   end
 
   xit 'returns results' do
