@@ -4,11 +4,13 @@ require 'sentiment_parser'
 describe SentimentParser do
 
   before do
-    @results = File.read('spec/fixtures/twitter.txt')
-    @analysis = {positive: 183, negative: 266}
+    #@results = File.read('spec/fixtures/twitter.txt')
+    #@analysis = {positive: 183, negative: 266}
+    @results = File.read('spec/fixtures/vigliotti.txt')
+    @analysis = {positive: 1, negative: 1}
   end
 
-  it 'returns results' do
+  xit 'returns results' do
     expect(@results.length).to_not eq(0)
   end
 
@@ -22,7 +24,7 @@ describe SentimentParser do
     expect(results.length).to_not eql 0
   end
 
-  xit 'analyzes' do
+  it 'analyzes' do
     analyze = SentimentParser.analyze(@results)
     expect(analyze).to eq @analysis
   end
