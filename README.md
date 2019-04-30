@@ -8,7 +8,7 @@ The goal is to get the specs to pass.  Using RSpec, type `rspec spec` to run the
 
 # Work Notes
 
-  pulled down repo
-  gem install rspec
-  bundle install
-  rspec spec (command completed)
+    pulled down repo
+    gem install rspec
+    bundle install
+    rspec spec (command completed)
