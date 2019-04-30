@@ -15,7 +15,10 @@ class SentimentParser
     words.downcase.split(/[\s,',-]/).each do |word|
       positive_words_array.each do |positive_word|
         puts "does #{word} equal #{positive_word}"
+
+        # this is returning false even when the words match
         puts positive_word == word
+
       end
     end
 
